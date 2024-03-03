@@ -1,9 +1,6 @@
+source common.sh
 mysql_root_password=$1
 
-print_task_heading() {
-  echo $1
-  echo "########## $1 ###########" &>>/tmp/expense.log
-}
 print_task_heading "disable default nodejs version"
 dnf module disable nodejs -y &>>/tmp/expense.log
 echo $?
