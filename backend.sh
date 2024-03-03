@@ -1,4 +1,4 @@
-mysql_root_password = $1
+mysql_root_password=$1
 echo disable default nodejs version
 dnf module disable nodejs -y &>>/tmp/expense.log
 echo $?
