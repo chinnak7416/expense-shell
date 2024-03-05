@@ -5,7 +5,6 @@ if [ -z "${mysql_root_password}" ]; then
   echo Input password is missing.
   exit 1
 fi
-
 print_task_heading "disable default nodejs version"
 dnf module disable nodejs -y &>>/tmp/expense.log
 check_status $?
