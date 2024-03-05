@@ -17,6 +17,6 @@ print_task_heading "Start mysqld"
 systemctl start mysqld &>>$LOG
 check_status $?
 
-print_task_heading "Set root password"
+print_task_heading "Set up mysql password"
 mysql_secure_installation --set-root-pass ${mysql_root_password} &>>$LOG
 check_status $?

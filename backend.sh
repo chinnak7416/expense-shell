@@ -18,8 +18,11 @@ print_task_heading "install nodejs"
 dnf install nodejs -y &>>$LOG
 check_status $?
 
-print_task_heading "adding apliction user"
-useradd expense &>>$LOG
+print_task_heading "adding application user"
+id expense &>>$LOG
+if [ $? -nq 0 ]; then
+  useradd expense &>>$LOG
+fi
 check_status $?
 
 print_task_heading "copy backend service file"
