@@ -4,7 +4,7 @@ print_task_heading() {
 }
 
 check_status(){
-if [ $1 -eq 0]; then
+if [ $1 -eq 0 ]; then
   echo SUCCESS
 else
   echo FAILURE
