@@ -24,3 +24,4 @@ if [ $? -ne 0 ]; then
 fi
 check_status $?
 #helloo
+#mysql
